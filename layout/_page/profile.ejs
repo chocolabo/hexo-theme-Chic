@@ -7,17 +7,32 @@
         <div class="description"><%- markdown(theme.description) %></div>
         <div class="links">
             <% if (theme.links !== undefined) { %>
-                <% for (var key in theme.links){ %>
-                    <a class="link-item" title="<%- key %>" href="<%= theme.links[key] %>">
-                        <% if(theme.links_text_enable) { %>
-                            <%= key %>
-                        <%}%>
-                        <%if(theme.links_icon_enable){ %>
-                            <i class="iconfont icon-<%- key.toLowerCase() %>"></i>
-                        <%}%>
-                    </a>
-                <% } %>
-            <% } %>
+                <% Object.keys(theme.links).forEach(function(key) { %>
+                  <a href="<%= theme.links[key].url %>" title="<%- key.toLowerCase() %>" class="link-item">
+                    <% if(theme.links_text_enable) { %>
+                        <%= key %>
+                    <%}%>
+                    <%if(theme.links_icon_enable){ %>
+                        <i class="fa-solid <%= theme.links[key].icon %>"></i>
+                    <%}%>
+                  </a>
+                <% }); %>
+              <% } %>
         </div>
     </div>
+
+    <% if (theme.recent_post_enable) { %>
+        <div class="recent-post2">
+            <h2 class="recent-post">Recent Post</h2>
+            <ul class="latest-posts">
+                <% site.posts.sort('date', -1).limit(theme.recent_post_items).forEach(function(post) { %>
+                    <li>
+                        <a href="<%= post.permalink %>"><%= post.title %></a>
+                        <span><%= post.date.format(theme.date_format) %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+        
 </div>

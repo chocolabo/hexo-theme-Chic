@@ -1,39 +1,52 @@
 # Header
-navname: Bentham's Blog
+navname: Honey.Choco.Ink
 
 # navigatior items
 nav:
   Posts: /archives
-  Categories: /category
+  #Categories: /category
   Tags: /tag
   About: /about
 
 # favicon
-favicon: /favicon.ico
+favicon: /image/icon.png
 
 # Profile
-nickname: Jeremy Bentham
+nickname: Honey.Choco.Ink
 
 ### this variable is MarkDown form.
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** <br>Fusce eget urna vitae velit *eleifend interdum at ac* nisi.
-avatar: /image/avatar.jpeg
+description: 自分が分かればそれでいいというスタンスのメモ置き場。<br />更新するのは気が向いたときだけ。
+avatar: /image/honey-logo.jpg
 
 # main menu navigation
 ## links key words should not be changed.
 ## Complete url after key words.
 ## Unused key can be commented out.
 links:
-  Blog: /archives
+  Posts: 
+    url: /archives
+    icon: fa-book-bookmark
   # Category:
   # Tags: 
   # Link:
   # Resume:
   # Publish:
   # Trophy:
-  # Gallery:
+  FireFish:
+    url: https://milk.choco.ink/@tachibana
+    icon: fa-rocket
+  #Fediverse(Misskey):
+  #  url: https://misskey.noellabo.jp/@tachibana
+  #  icon: fa-rocket
+  Pixelfed:
+    url: https://vanilla.choco.ink/tachibana
+    icon: fa-camera-retro  
+  Photo Gallery: 
+    url: https://caramel.choco.ink
+    icon: fa-photo-film
   # RSS:
   # AliPay:
-  ZhiHu: https://www.zhihu.com/people/sirice
+  #ZhiHu: https://www.zhihu.com/people/sirice
   # LinkedIn:
   # FaceBook:
   # Twitter:
@@ -43,17 +56,21 @@ links:
   # Sketch:
   # Gitlab:
   # Dribbble:
-  Instagram:
-  Reddit:
+  #Instagram:
+  #Reddit:
   # YouTube:
   # QQ:
   # Weibo:
   # WeChat:
-  Github: https://github.com/Siricee
+  #Github: https://github.com/Siricee
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
 links_icon_enable: true
+
+# 最新の投稿
+recent_post_items: 3
+recent_post_enable: true
 
 # Post page
 ## Post_meta
@@ -63,7 +80,7 @@ post_author_enable: true
 post_date_enable: true
 post_category_enable: true
 ## Post copyright
-post_copyright_enable: true
+post_copyright_enable: false
 
 post_copyright_author_enable: true
 post_copyright_permalink_enable: true
@@ -81,7 +98,7 @@ page_title_enable: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: MMMM D, YYYY
+date_format: YYYY/MM/DD
 time_format: H:mm:ss
 
 # stylesheets loaded in the <head>
