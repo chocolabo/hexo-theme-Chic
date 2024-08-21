@@ -63,7 +63,69 @@ if (is_archive()){
         <% } %>
     <% } %>
 <% } %>
+<link rel="alternative" href="/rss2.xml" title="<% if (title){ %><%= title %> | <% } %><%= config.title %>" type="application/atom+xml">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var offset = 100;
+        var duration = 500;
+        var pagetop = document.querySelector('.pagetop');
+        var pagelink = document.querySelector('.page-link'); // 新しいボタンの選択
+        
+        function handleScroll() {
+            if (window.pageYOffset > offset) {
+                if (pagetop.style.display !== 'block') {
+                    pagetop.style.display = 'block';
+                }
+                if (pagelink.style.display !== 'block') {
+                    pagelink.style.display = 'block'; // スクロール時にリンクボタンを表示
+                }
+            } else {
+                if (pagetop.style.display !== 'none') {
+                    pagetop.style.display = 'none';
+                }
+                if (pagelink.style.display !== 'none') {
+                    pagelink.style.display = 'none'; // スクロールが戻ったらリンクボタンを非表示
+                }
+            }
+        }
+        
+        function scrollToTop(event) {
+            event.preventDefault();
+            smoothScrollTo(0, duration);
+        }
+        
+        function smoothScrollTo(target, duration) {
+            var start = window.pageYOffset;
+            var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+        
+            function scroll() {
+                var now = 'now' in window.performance ? performance.now() : new Date().getTime();
+                var time = Math.min(1, ((now - startTime) / duration));
+                window.scroll(0, Math.ceil((time * (target - start)) + start));
+        
+                if (window.pageYOffset === target) {
+                    return;
+                }
+        
+                requestAnimationFrame(scroll);
+            }
+        
+            scroll();
+        }
+        
+        window.addEventListener('scroll', handleScroll);
+        
+        pagetop.addEventListener('click', scrollToTop);
+        
+        window.addEventListener('beforeunload', function() {
+            window.removeEventListener('scroll', handleScroll);
+            pagetop.removeEventListener('click', scrollToTop);
+        });
+    });
+    
+    </script>
+    

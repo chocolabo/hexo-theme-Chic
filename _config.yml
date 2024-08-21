@@ -7,6 +7,7 @@ nav:
   #Categories: /category
   Tags: /tag
   About: /about
+  RSS: /rss2.xml
 
 # favicon
 favicon: /image/icon.png
@@ -15,7 +16,7 @@ favicon: /image/icon.png
 nickname: Honey.Choco.Ink
 
 ### this variable is MarkDown form.
-description: 自分が分かればそれでいいというスタンスのメモ置き場。<br />更新するのは気が向いたときだけ。
+description: 自分が分かればそれでいいというスタンスのメモ置き場。
 avatar: /image/honey-logo.jpg
 
 # main menu navigation
@@ -26,6 +27,9 @@ links:
   Posts: 
     url: /archives
     icon: fa-book-bookmark
+  RSS:
+    url: /rss2.xml
+    icon: fa-square-rss
   # Category:
   # Tags: 
   # Link:
@@ -44,7 +48,6 @@ links:
   Photo Gallery: 
     url: https://caramel.choco.ink
     icon: fa-photo-film
-  # RSS:
   # AliPay:
   #ZhiHu: https://www.zhihu.com/people/sirice
   # LinkedIn:

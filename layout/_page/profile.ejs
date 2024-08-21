@@ -19,20 +19,18 @@
                 <% }); %>
               <% } %>
         </div>
+        <% if (theme.recent_post_enable) { %>
+            <div class="recent-posts">
+                <h2 class="recent-post">Recent Post</h2>
+                <ul class="latest-posts">
+                    <% site.posts.sort('date', -1).limit(theme.recent_post_items).forEach(function(post) { %>
+                        <li>
+                            <a href="<%= post.permalink %>"><%= post.title %></a>
+                            <span><%= post.date.format(theme.date_format) %></span>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+            <% } %>
     </div>
-
-    <% if (theme.recent_post_enable) { %>
-        <div class="recent-post2">
-            <h2 class="recent-post">Recent Post</h2>
-            <ul class="latest-posts">
-                <% site.posts.sort('date', -1).limit(theme.recent_post_items).forEach(function(post) { %>
-                    <li>
-                        <a href="<%= post.permalink %>"><%= post.title %></a>
-                        <span><%= post.date.format(theme.date_format) %></span>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-        <% } %>
-        
 </div>

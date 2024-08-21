@@ -11,18 +11,38 @@ body {
 .post-content {
   font-size: 1.1em;
 }
+.post-content blockquote {
+    font-size:0.9em;
+}
+
+.post-nav {
+    margin-top:20px;
+}
+
+.navbar-mobile .container {
+    background: #efefef;
+    line-height: 3em;
+}
+.navbar-mobile .container .menu {
+    background: #efefef;
+}
+.navbar-mobile .container .navbar-header .menu-toggle {
+    line-height: 3em;
+}
+.navbar-mobile .container {
+    line-height: 3em;
+}
 
 .note {
     padding: 0.75rem;
+    padding-top: 0.2rem;
     border-left: 0.35rem solid;
     border-radius: 0.25rem;
     margin: 1.5rem 0;
-
     transition: color 0.2s ease-in-out;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .note a {
-
     transition: color 0.2s ease-in-out;
   }
   .note *:last-child {
@@ -63,14 +83,14 @@ body {
     margin:2.5em auto 2em;
     max-width:880px;
     transition:box-shadow .25s;
-    width:100%
+    width:100%;
   }
   .link-area a {
     text-decoration: none;
   }
   
   .link-area:hover {
-    box-shadow:0 4px 16px rgba(0,0,0,.1),0 12px 28px -12px rgba(0,0,0,.05)
+    box-shadow:0 4px 16px rgba(0,0,0,.1),0 12px 28px -12px rgba(0,0,0,.05);
   }
 
   .link-area .og-image{
@@ -108,21 +128,7 @@ body {
   .link-area .clear {
     clear: both;
   }
-  
-  @media screen and (max-width: 550px) {
-    .sub-title {
-      display: none;
-    }
-    .link-area:before {
-      font-size: .66em;
-    }
-    .link-area .descriptions .og-title {
-      font-size: .80em;
-    }
-    .link-area .descriptions .og-description {
-      display: none;
-    }
-  }
+
   .group-image-container {
     margin: 1.5rem auto;
   }
@@ -150,12 +156,13 @@ body {
 }
 
 .recent-posts {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 1rem;
 }
 
 .recent-post {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 .latest-posts {
     list-style: none; /* リストマーカーを削除 */
@@ -167,6 +174,7 @@ body {
     display: flex; /* タイトルと日付を横に並べる */
     justify-content: space-between; /* タイトルと日付を左右に配置 */
     align-items: center; /* タイトルと日付の垂直位置を揃える */
+    text-align: left;
 }
 
 .latest-posts li a {
@@ -183,8 +191,101 @@ body {
     font-size: 0.9em; /* 日付のフォントサイズ */
     margin-left: 10px; /* タイトルと日付の間隔 */
 }
+
+  .footer {
+    height: 2rem;
+    line-height: 1.5rem;
+    padding-top: 1em;
+  }
+
 @media screen and (max-width: 550px) {
+  .post-content {
+    font-size: 0.9em;
+  }
+  .post-header .post-title {
+    font-size: 1.2em;
+    }
+
+.archive-item-link {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  .profile-container .description{
+    font-size: 0.85em;
+    }
+    
+    .sub-title {
+      display: none;
+    }
+    .link-area:before {
+      font-size: .66em;
+    }
+    .link-area .descriptions .og-title {
+      font-size: .80em;
+    }
+    .link-area .descriptions .og-description {
+      display: none;
+    }
+    
     .latest-posts li span {
         display: none;
     }
+    .recent-posts {
+        font-size: 0.9em;
+    }
+
+}
+
+    .pagetop {
+        color: #fff;
+        background-color: rgba(0,0,0,0.3);
+        text-decoration: none;
+        display: none;
+        position: fixed;
+        bottom: 1.5em;
+        right: 4rem;
+        font-size: 1.1rem;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 2rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .pagetop:hover {
+        color: #fff !important;
+        background-color: #2d96bd;
+        text-decoration: none;
+    }
+    
+ .page-link {
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    text-decoration: none;
+    display: none; /* 最初は非表示 */
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5rem; /* 位置を調整 */
+    font-size: 1.1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page-link a {
+    color: #fff; /* アイコンの色 */
+    display: block;
+}
+
+.page-link:hover {
+    color: #fff !important;
+    background-color: #2d96bd;
+    text-decoration: none;
 }
