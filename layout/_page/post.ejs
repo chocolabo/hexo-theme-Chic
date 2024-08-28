@@ -1,8 +1,8 @@
 <div class="container">
     <%# toc %>
-    <%if(theme.post_toc_enable && toc(page.content).length!==0){%>
+    <% if (page.toc !== false && theme.post_toc_enable && toc(page.content).length !== 0) { %>
         <%- partial('_partial/toc') %>
-    <%}%>
+    <% } %>
 
     <%# article %>
     <article class="post-wrap">
