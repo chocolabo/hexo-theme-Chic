@@ -38,8 +38,7 @@ how to add a category page:
                                     <%- category_item.name %>
                                 </h3>
                             </a>
-                            <% category_item.posts.forEach((post_item, index = 0)=>{ %>
-                                <%# console.log(index) %>
+                            <% category_item.posts.sort('-date').forEach((post_item, index = 0)=>{ %>
                                 <% if(++index <= 3){ %>
                                     <article class="archive-item">
                                         <a class="archive-item-link"
@@ -51,6 +50,7 @@ how to add a category page:
                                 <a class="more-post-link" href="<%- url_for(category_item.path) %>">More >></a>
                             <% } %>
                         </div>
+                        
                     </div>
                 <% }) %>
             </div>
