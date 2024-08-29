@@ -8,13 +8,38 @@ body {
     background: #efefef;
 }
 
+a {
+ word-break: break-all;
+}
+
+img{
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-touch-callout:none;
+  -moz-user-select:none;
+  user-select:none;
+  pointer-events: none;
+	}
+
 .post-content {
   font-size: 1.1em;
+}
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  padding-top: 0.8em;
+  padding-bottom: 0;
+  margin-bottom:0;
+}
+.post-content p {
+  padding-top:0;
+  margin-top:0.3em;
 }
 .post-content blockquote {
     font-size:0.9em;
 }
-
 .post-nav {
     margin-top:20px;
 }
@@ -84,6 +109,7 @@ body {
     max-width:880px;
     transition:box-shadow .25s;
     width:100%;
+    margin-top: 0.3em;
   }
   .link-area a {
     text-decoration: none;
@@ -198,46 +224,6 @@ body {
     padding-top: 1em;
   }
 
-@media screen and (max-width: 550px) {
-  .post-content {
-    font-size: 0.9em;
-  }
-  .post-header .post-title {
-    font-size: 1.2em;
-    }
-
-.archive-item-link {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-  .profile-container .description{
-    font-size: 0.85em;
-    }
-    
-    .sub-title {
-      display: none;
-    }
-    .link-area:before {
-      font-size: .66em;
-    }
-    .link-area .descriptions .og-title {
-      font-size: .80em;
-    }
-    .link-area .descriptions .og-description {
-      display: none;
-    }
-    
-    .latest-posts li span {
-        display: none;
-    }
-    .recent-posts {
-        font-size: 0.9em;
-    }
-
-}
 
     .pagetop {
         color: #fff;
@@ -288,4 +274,44 @@ body {
     color: #fff !important;
     background-color: #2d96bd;
     text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
+  .post-content {
+    font-size: 0.9em;
+  }
+  .post-header .post-title {
+    font-size: 1.2em;
+    }
+
+.archive-item-link {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  .profile-container .description{
+    font-size: 0.85em;
+    }
+    
+    .sub-title {
+      display: none;
+    }
+    .link-area:before {
+      font-size: .66em;
+    }
+    .link-area .descriptions .og-title {
+      font-size: .80em;
+    }
+    .link-area .descriptions .og-description {
+      display: none;
+    }
+    
+    .latest-posts li span {
+        display: none;
+    }
+    .recent-posts {
+        font-size: 0.9em;
+    }
 }

@@ -4,7 +4,7 @@ navname: Honey.Choco.Ink
 # navigatior items
 nav:
   Posts: /archives
-  #Categories: /category
+  Categories: /category
   Tags: /tag
   About: /about
   RSS: /rss2.xml
