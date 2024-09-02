@@ -221,57 +221,40 @@ body {
     padding-top: 1em;
   }
 
-
-    .pagetop {
-        color: #fff;
-        background-color: rgba(0,0,0,0.3);
-        text-decoration: none;
-        display: none;
-        position: fixed;
-        bottom: 1.5em;
-        right: 4rem;
-        font-size: 1.1rem;
-        width: 2rem;
-        height: 2rem;
-        line-height: 2rem;
-        border-radius: 2rem;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .pagetop:hover {
-        color: #fff !important;
-        background-color: #2d96bd;
-        text-decoration: none;
-    }
-    
- .page-link {
-    color: #fff;
-    background-color: rgba(0,0,0,0.3);
-    text-decoration: none;
-    display: none; /* 最初は非表示 */
+.scroll-buttons {
     position: fixed;
     bottom: 1.5em;
-    right: 1.5rem; /* 位置を調整 */
-    font-size: 1.1rem;
+    right: 1.5em;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    gap: 0.5em; /* ボタン間の隙間 */
+    align-items: center; /* ボタンを中央揃え */
+}
+
+.page-link, .pagetop {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    line-height: 2rem;
-    border-radius: 1rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    display: none; /* 最初は非表示 */
+    text-align: center;
+    line-height: 2rem;
 }
 
-.page-link a {
-    color: #fff; /* アイコンの色 */
-    display: block;
-}
-
-.page-link:hover {
-    color: #fff !important;
-    background-color: #2d96bd;
+.page-link a, .pagetop a {
+    color: #fff;
+    font-size: 1.1rem;
     text-decoration: none;
 }
+
+.page-link:hover, .pagetop:hover {
+    background-color: #2d96bd;
+}
+
 
 @media screen and (max-width: 550px) {
   .post-content {
