@@ -8,7 +8,7 @@ nav:
   Tags: /tag
   About: /about
   Camera・Lens: /camera-lens
-  RSS: /rss2.xml
+  #RSS: /rss2.xml
 
 # favicon
 favicon: /image/icon.png
