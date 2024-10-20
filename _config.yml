@@ -26,28 +26,40 @@ avatar: /image/honey-logo.jpg
 links:
   Posts: 
     url: /archives
-    icon: fa-book-bookmark
+    icon: fa-solid fa-book-bookmark
   RSS:
     url: /rss2.xml
-    icon: fa-square-rss
+    icon: fa-solid fa-square-rss
   # Category:
   # Tags: 
   # Link:
   # Resume:
   # Publish:
   # Trophy:
-  FireFish:
+  Iceshrimp:
     url: https://milk.choco.ink/@tachibana
-    icon: fa-rocket
+    icon: fa-solid fa-rocket
   #Fediverse(Misskey):
   #  url: https://misskey.noellabo.jp/@tachibana
-  #  icon: fa-rocket
+  #  icon: fa-rocket 
   Pixelfed:
     url: https://vanilla.choco.ink/tachibana
-    icon: fa-camera-retro  
+    icon: fa-solid fa-camera-retro
+  Bluesky: 
+    url: https://bsky.app/profile/sweet.choco.ink
+    icon: fa-brands fa-bluesky     
+  # Mastodon: 
+  #   url: https://fedibird.com/@tachibana502
+  #   icon: fa-brands fa-mastodon    
   Photo Gallery: 
     url: https://caramel.choco.ink
-    icon: fa-photo-film
+    icon: fa-solid fa-photo-film
+  MogMog.Party: 
+    url: https://caramel.choco.ink
+    icon: fa-solid fa-utensils
+  Link: 
+    url: https://citrus.choco.ink
+    icon: fa-solid fa-address-card
   # AliPay:
   #ZhiHu: https://www.zhihu.com/people/sirice
   # LinkedIn:
@@ -72,7 +84,7 @@ links_text_enable: false
 links_icon_enable: true
 
 # 最新の投稿
-recent_post_items: 3
+recent_post_items: 5
 recent_post_enable: true
 
 # Post page

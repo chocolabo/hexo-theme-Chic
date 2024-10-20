@@ -5,20 +5,7 @@
         </div>
         <div class="nickname"><%- theme.nickname %></div>
         <div class="description"><%- markdown(theme.description) %></div>
-        <div class="links">
-            <% if (theme.links !== undefined) { %>
-                <% Object.keys(theme.links).forEach(function(key) { %>
-                  <a href="<%= theme.links[key].url %>" title="<%- key.toLowerCase() %>" class="link-item">
-                    <% if(theme.links_text_enable) { %>
-                        <%= key %>
-                    <%}%>
-                    <%if(theme.links_icon_enable){ %>
-                        <i class="fa-solid <%= theme.links[key].icon %>"></i>
-                    <%}%>
-                  </a>
-                <% }); %>
-              <% } %>
-        </div>
+
         <% if (theme.recent_post_enable) { %>
             <div class="recent-posts">
                 <h2 class="recent-post">Recent Post</h2>
@@ -32,5 +19,6 @@
                 </ul>
             </div>
             <% } %>
+
     </div>
 </div>
