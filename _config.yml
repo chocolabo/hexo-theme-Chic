@@ -42,9 +42,9 @@ links:
   #Fediverse(Misskey):
   #  url: https://misskey.noellabo.jp/@tachibana
   #  icon: fa-rocket 
-  Pixelfed:
-    url: https://vanilla.choco.ink/tachibana
-    icon: fa-solid fa-camera-retro
+  # Pixelfed:
+  #   url: https://vanilla.choco.ink/tachibana
+  #   icon: fa-solid fa-camera-retro
   Bluesky: 
     url: https://bsky.app/profile/sweet.choco.ink
     icon: fa-brands fa-bluesky     
