@@ -1,6 +1,6 @@
 <div>
     <% (socialLinks || []).forEach(link => { %>
-        <a href="<%= link.href %>" title="<%= link.title %>" class="mr-2">
+        <a href="<%= link.href %>" title="<%= link.title %>" class="mr-2" rel="me noopener noreferrer">
             <% if (link.svg) { %>
                 <%= link.svg %>
             <% } else { %>
