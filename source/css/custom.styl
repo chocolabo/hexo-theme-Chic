@@ -303,3 +303,22 @@ body {
     line-height: 1.5rem;
     padding-top: 1em;
   }
+/* 通常のアイコンの色 */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease; /* スムーズな色の変化 */
+}
+
+/* ホバー時に色を変更 */
+a:hover .social-icon {
+  filter: brightness(2) saturate(100%) invert(25%) sepia(25%) saturate(500%) hue-rotate(190deg);
+}
+
+.dark-theme & .social-icon {
+  filter: invert(1) brightness(0.7); /* 色を反転して明るくする */
+}
+
+.dark-theme & a:hover .social-icon {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(200%) hue-rotate(200deg);
+}

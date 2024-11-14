@@ -1,0 +1,11 @@
+<div>
+    <% (socialLinks || []).forEach(link => { %>
+        <a href="<%= link.href %>" title="<%= link.title %>" class="mr-2">
+            <% if (link.svg) { %>
+                <%= link.svg %>
+            <% } else { %>
+                <img src="<%= link.svgPath %>" alt="<%= link.title %>" width="24" height="24" class="social-icon">
+            <% } %>
+        </a>
+    <% }) %>
+</div>

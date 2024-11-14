@@ -3,17 +3,7 @@
         <span>© <%= config.author %> | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
     <div class="links">
-        <% if (theme.links !== undefined) { %>
-            <% Object.keys(theme.links).forEach(function(key) { %>
-              <a href="<%= theme.links[key].url %>" title="<%- key.toLowerCase() %>" class="link-item">
-                <% if(theme.links_text_enable) { %>
-                    <%= key %>
-                <%}%>
-                <%if(theme.links_icon_enable){ %>
-                    <i class="<%= theme.links[key].icon %>"></i>
-                <%}%>
-              </a>
-            <% }); %>
-          <% } %>
+      <%- partial('social-links', { iconSize: 24, socialLinks: theme.socialLinks }) %>
+
     </div>    
 </footer>
