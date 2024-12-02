@@ -138,12 +138,12 @@ mathjax:
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
 
 socialLinks:
-  - href: "https://milk.choco.ink/@tachibana"
-    title: "Iceshrimp"
-    svgPath: "/icons/fediverse-logo.svg"  # アイコンのパス
-  - href: "https://misskey.noellabo.jp/@tachibana"
-    title: "Misskey"
-    svgPath: "/icons/misskey.svg"  # アイコンのパス
+  # - href: "https://milk.choco.ink/@tachibana"
+  #   title: "Iceshrimp"
+  #   svgPath: "/icons/fediverse-logo.svg"  # アイコンのパス
+  # - href: "https://misskey.noellabo.jp/@tachibana"
+  #   title: "Misskey"
+  #   svgPath: "/icons/misskey.svg"  # アイコンのパス
   # - href: "https://fedibird.com/@tachibana502"
   #   title: "Fedibird"
   #   svgPath: "/icons/mastodon.svg"  # アイコンのパス    
