@@ -147,9 +147,9 @@ socialLinks:
   # - href: "https://fedibird.com/@tachibana502"
   #   title: "Fedibird"
   #   svgPath: "/icons/mastodon.svg"  # アイコンのパス    
-  - href: "https://bsky.app/profile/sweet.choco.ink"
-    title: "Bluesky"
-    svgPath: "/icons/bluesky.svg"  # アイコンのパス
+  # - href: "https://bsky.app/profile/sweet.choco.ink"
+  #  title: "Bluesky"
+  #  svgPath: "/icons/bluesky.svg"  # アイコンのパス
   - href: "https://caramel.choco.ink"
     title: "Caramel.Choco.Ink"
     svgPath: "/icons/camera.svg"  # アイコンのパス                 
